@@ -1,12 +1,133 @@
-# React + Vite
+````markdown
+# Online Business Registration Service
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, minimalist **React + TailwindCSS** one-page website for offering online business name registration services in Nigeria.  
+The website highlights services, benefits, processes, testimonials, and includes a client feedback form.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Minimalist, mobile-friendly UI with TailwindCSS
+- Hero section with business name & CTA button
+- Benefits and service details
+- Step-by-step process explanation
+- Testimonials & client feedback section
+- FAQ for common questions
+- WhatsApp CTA for direct client contact
+- Footer with quick links
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+
+- **React.js** (Frontend framework)
+- **TailwindCSS** (Styling)
+- **Optional Email Service** (for feedback form, e.g., EmailJS)
+
+---
+
+## 📦 Installation
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/your-username/business-registration-site.git
+   ```
+````
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd business-registration-site
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Run the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+   Your site should now be running on [http://localhost:5173](http://localhost:5173) (if using Vite).
+
+---
+
+## ✉️ Feedback Form Integration
+
+The feedback form is set up but does not send emails by default.
+You can connect it using **EmailJS**:
+
+1. Create an account at [EmailJS](https://www.emailjs.com/).
+2. Set up a new service, template, and get your `SERVICE_ID`, `TEMPLATE_ID`, and `PUBLIC_KEY`.
+3. Install EmailJS SDK:
+
+   ```bash
+   npm install emailjs-com
+   ```
+
+4. In your form component:
+
+   ```javascript
+   import emailjs from "emailjs-com";
+
+   const sendEmail = (e) => {
+     e.preventDefault();
+
+     emailjs
+       .sendForm(
+         "YOUR_SERVICE_ID",
+         "YOUR_TEMPLATE_ID",
+         e.target,
+         "YOUR_PUBLIC_KEY"
+       )
+       .then(
+         (result) => {
+           console.log(result.text);
+           alert("Feedback sent successfully!");
+         },
+         (error) => {
+           console.log(error.text);
+           alert("Error sending feedback.");
+         }
+       );
+   };
+   ```
+
+5. Replace the `<form>` tag with:
+
+   ```html
+   <form onSubmit="{sendEmail}"></form>
+   ```
+
+---
+
+## 🌍 Deployment
+
+You can deploy this website easily on:
+
+- [Vercel](https://vercel.com)
+- [Netlify](https://netlify.com)
+- [GitHub Pages](https://pages.github.com)
+
+---
+
+## 📄 License
+
+This project is open-source and free to use for personal or business purposes.
+
+---
+
+## 👨🏽‍💻 Author
+
+**Fatai Ayeloja**
+Helping micro-businesses register their business names with CAC, 100% online.
+
+```
+
+Would you like me to also **include sample environment variables** for EmailJS (like `.env.example`) so you don’t have to hardcode your API keys?
+```
