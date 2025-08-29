@@ -129,5 +129,4 @@ Helping micro-businesses register their business names with CAC, 100% online.
 
 ```
 
-Would you like me to also **include sample environment variables** for EmailJS (like `.env.example`) so you don’t have to hardcode your API keys?
 ```
