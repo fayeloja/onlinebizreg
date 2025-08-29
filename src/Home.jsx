@@ -94,39 +94,6 @@ function Home() {
         </div>
       </section>
 
-      {/* Client Feedback */}
-      <section className="py-12 px-6 text-center">
-        <h2 className="text-2xl font-semibold mb-6">Share Your Feedback</h2>
-        <p className="max-w-xl mx-auto mb-6">
-          We value every client’s experience. Please let us know how we did so
-          we can keep improving.
-        </p>
-        <form className="max-w-xl mx-auto text-left space-y-4">
-          <div>
-            <label className="block mb-2 font-medium">Your Name</label>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              className="w-full border rounded-lg px-4 py-2"
-            />
-          </div>
-          <div>
-            <label className="block mb-2 font-medium">Your Feedback</label>
-            <textarea
-              placeholder="Write your review here..."
-              rows="4"
-              className="w-full border rounded-lg px-4 py-2"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700"
-          >
-            Submit Feedback
-          </button>
-        </form>
-      </section>
-
       {/* FAQ */}
       <section className="py-12 px-6 text-left max-w-3xl mx-auto">
         <h2 className="text-2xl font-semibold mb-6 text-center">FAQs</h2>
