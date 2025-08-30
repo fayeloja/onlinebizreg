@@ -5,10 +5,7 @@ function Home() {
     <div className="min-h-screen bg-white text-gray-800 flex flex-col">
       {/* Header / Hero */}
       <header className="text-center py-12 px-4 bg-gray-50">
-        <h1 className="text-4xl font-extrabold mb-10">Iyanda Digital Agency</h1>
-        <h2 className="text-3xl font-bold mb-2">
-          Register Your Business Online
-        </h2>
+        <h1 className="text-3xl font-bold mb-2">Register Your Business NG</h1>
         <p className="text-lg mb-6">
           Fast, Affordable & Stress-Free CAC Registration
         </p>
